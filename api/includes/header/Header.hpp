@@ -170,60 +170,60 @@ namespace Zia
         bool _isCustom;
 
     public:
-	/**
-	 * @brief Default constructor
-	 */
+        /**
+         * @brief Default constructor
+         */
         Header();
 
-	/**
-	 * @brief Constructor for a properly set Request Header
-	 * @param requestHeader The header name (corresponding to the RequestHeader enum)
-	 * @param value The header's value
-	 */
+        /**
+         * @brief Constructor for a properly set Request Header
+         * @param requestHeader The header name (corresponding to the RequestHeader enum)
+         * @param value The header's value
+         */
         explicit Header(const RequestHeader &requestHeader, const std::string &value = "");
 
-	/**
-	 * @brief Constructor for a properly set Response Header
-	 * @param responseHeader The header name (corresponding to the ResponseHeader enum)
-	 * @param value The header's value
-	 */
+        /**
+         * @brief Constructor for a properly set Response Header
+         * @param responseHeader The header name (corresponding to the ResponseHeader enum)
+         * @param value The header's value
+         */
         explicit Header(const ResponseHeader &responseHeader, const std::string &value = "");
 
-	/**
-	 * @brief Constructor for a Custom Header
-	 * @param key The header name
-	 * @param value The header's value
-	 */
+        /**
+         * @brief Constructor for a Custom Header
+         * @param key The header name
+         * @param value The header's value
+         */
         explicit Header(const std::string &key, const std::string &value = "");
 
-	/**
-	 * @brief Serialize the Header class to a RFC compliant HTTP Header
-	 * @return A string containing the formated HTTP Header
-	 */
+        /**
+         * @brief Serialize the Header class to a RFC compliant HTTP Header
+         * @return A string containing the formated HTTP Header
+         */
         const std::string render(HeaderNormalizationType) const;
 
-	/**
-	 * @brief Getter for the Header Name
-	 * @return A string containing the name of the Header
-	 */
+        /**
+         * @brief Getter for the Header Name
+         * @return A string containing the name of the Header
+         */
         const std::string &getKey() const;
 
-	/**
-	 * @brief Getter for the Header value
-	 * @return A string containing the value of the Header
-	 */
+        /**
+         * @brief Getter for the Header value
+         * @return A string containing the value of the Header
+         */
         const std::string &getValue() const;
 
-	/**
-	 * @brief Setter for the Header name.
-	 * @param key The name of the Header.
-	 */
+        /**
+         * @brief Setter for the Header name.
+         * @param key The name of the Header.
+         */
         void setKey(const std::string &key);
 
-	/**
-	 * @brief Setter for the Header value.
-	 * @param key The value of the Header.
-	 */
+        /**
+         * @brief Setter for the Header value.
+         * @param key The value of the Header.
+         */
         void setValue(const std::string &value);
     };
 }
