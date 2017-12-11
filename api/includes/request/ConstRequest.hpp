@@ -18,127 +18,127 @@
 
 namespace Zia
 {
-  /**
-   * @see https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-   */
-  class ConstRequest
-  {
-  public:
-
     /**
-     * Used to recover the correct Method enum
+     * @see https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
      */
-    static const std::map<const std::string, const Request::Method> methodText;
+    class ConstRequest
+    {
+    public:
 
-  private:
-    /**
-     * The Request Method.
-     */
-    Request::Method _method;
+        /**
+         * Used to recover the correct Method enum
+         */
+        static const std::map<const std::string, const Request::Method> methodText;
 
-    /**
-     * The Request Method (string) in case of Method::CUSTOM.
-     */
-    std::string _methodText;
+    private:
+        /**
+         * The Request Method.
+         */
+        Request::Method _method;
 
-    /**
-     * The Request URI.
-     */
-    std::string _uri;
+        /**
+         * The Request Method (string) in case of Method::CUSTOM.
+         */
+        std::string _methodText;
 
-    /**
-     * The Request HTTP Version.
-     * eg. HTTP/1.1
-     */
-    std::string _httpVersion;
+        /**
+         * The Request URI.
+         */
+        std::string _uri;
 
-    /**
-     * The Request Headers.
-     */
-    HeaderWrapper _headers;
+        /**
+         * The Request HTTP Version.
+         * eg. HTTP/1.1
+         */
+        std::string _httpVersion;
 
-    /**
-     * The Request Body.
-     * Have to be parsed to recover params. eg. POST
-     */
-    std::string _body;
+        /**
+         * The Request Headers.
+         */
+        HeaderWrapper _headers;
 
-    std::map<std::string, std::string> _params;
+        /**
+         * The Request Body.
+         * Have to be parsed to recover params. eg. POST
+         */
+        std::string _body;
 
-  public:
-    explicit ConstRequest(Request request);
+        std::map<std::string, std::string> _params;
 
-    ConstRequest(Request::Method method, std::string uri,
-		 std::string httpVersion, std::string body);
+    public:
+        explicit ConstRequest(Request request);
 
-    ConstRequest(Request::Method method, std::string methodText, std::string uri
-    std::string HttpVersion, std::string body);
+        ConstRequest(Request::Method method, std::string uri,
+                     std::string httpVersion, std::string body);
 
-    ~ConstRequest();
+        ConstRequest(Request::Method method, std::string methodText, std::string uri,
+                     std::string HttpVersion, std::string body);
 
-    /**
-     * Get the Request Method.
-     *
-     * @return
-     */
-    Request::Method getMethod() const;
+        ~ConstRequest();
 
-    /**
-     * Get the Request Method in string.
-     *
-     * @return
-     */
-    const std::string &getMethodText() const;
+        /**
+         * Get the Request Method.
+         *
+         * @return
+         */
+        Request::Method getMethod() const;
 
-    /**
-     * Get the Request URI.
-     *
-     * @return
-     */
-    const std::string &getUri() const;
+        /**
+         * Get the Request Method in string.
+         *
+         * @return
+         */
+        const std::string &getMethodText() const;
 
-    /**
-     * Get the Request HTTP Version.
-     *
-     * @return
-     */
-    const std::string &getHttpVersion() const;
+        /**
+         * Get the Request URI.
+         *
+         * @return
+         */
+        const std::string &getUri() const;
 
-    /**
-     * Get the Request Headers.
-     *
-     * @return
-     */
-    const HeaderWrapper &getHeaders() const;
+        /**
+         * Get the Request HTTP Version.
+         *
+         * @return
+         */
+        const std::string &getHttpVersion() const;
 
-    /**
-     * Get the Request Body.
-     *
-     * @return
-     */
-    const std::string &getBody() const;
+        /**
+         * Get the Request Headers.
+         *
+         * @return
+         */
+        const HeaderWrapper &getHeaders() const;
 
-    /**
-     * Get the Request params parsed from the body.
-     *
-     * @return
-     */
-    const std::map<std::string, std::string> &getParams() const;
+        /**
+         * Get the Request Body.
+         *
+         * @return
+         */
+        const std::string &getBody() const;
+
+        /**
+         * Get the Request params parsed from the body.
+         *
+         * @return
+         */
+        const std::map<std::string, std::string> &getParams() const;
 
 #ifdef REQUEST_SETTERS
-    void setMethod(Method method);
+        void setMethod(Method method);
 
-        void setMethodText(const std::string &methodText);
+            void setMethodText(const std::string &methodText);
 
-        void setUri(const std::string &uri);
+            void setUri(const std::string &uri);
 
-        void setHttpVersion(const std::string &httpVersion);
+            void setHttpVersion(const std::string &httpVersion);
 
-        void setHeaders(const HeaderWrapper &headers);
+            void setHeaders(const HeaderWrapper &headers);
 
-        void setBody(const std::string &body);
+            void setBody(const std::string &body);
 #endif // !REQUEST_SETTERS
-  };
+    };
 
-  typedef std::unique_ptr<ConstRequest> ConstRequestPtr;
+    typedef std::unique_ptr<ConstRequest> ConstRequestPtr;
 }
