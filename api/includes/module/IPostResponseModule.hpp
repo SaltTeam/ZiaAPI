@@ -14,20 +14,23 @@ namespace Zia
 {
     namespace Module
     {
+	/**
+	 * @class IPostResponseModule
+	 */
         class IPostResponseModule
         {
         public:
             /**
              * Get the weight of the catchPostResponse method of this module.
              *
-             * @return
+             * @return The weight of the catchPostResponse method of this module.
              */
             virtual int getPostResponseWeight() const = 0;
 
             /**
              * Catch the response as string after it was build by the httpd and before the sending.
              *
-             * @param response
+             * @param response A string containing the raw data of the response.
              */
             virtual void catchPostResponse(std::string &response) = 0;
         };

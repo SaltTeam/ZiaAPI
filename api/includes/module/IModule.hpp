@@ -15,12 +15,17 @@
 
 namespace Zia
 {
+    /**
+     * @namespace Module
+     */
     namespace Module
     {
         /**
          * Module Interface.
          *
          * Every modules must implements this interface to be compatible with the Zia Httpd server.
+         *
+         * @class IModule
          */
         class IModule
         {
@@ -41,29 +46,29 @@ namespace Zia
              * Update the settings.
              * Called from the Zia Http Server.
              *
-             * @param settings
+             * @param settings The settings gave by the configuration parser.
              */
             virtual void updateSettings(const std::map<std::string, std::string> &settings) = 0;
 
             /**
              * Get one setting from this module's settings
              *
-             * @param key
-             * @return
+             * @param key The settings directive.
+             * @return The value associated to the directive.
              */
             virtual const std::string &getSetting(const std::string &key) const = 0;
 
             /**
              * Get the whole module's settings
              *
-             * @return
+             * @return The map containing the settings
              */
             virtual const std::map<std::string, std::string> &getAllSettings() const = 0;
 
             /**
              * Get the configuration path file of the module.
              *
-             * @return
+             * @return The configuration path file of the module
              */
             virtual const std::string &getConfigPathFile() const = 0;
         };

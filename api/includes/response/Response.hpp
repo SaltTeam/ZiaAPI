@@ -15,6 +15,11 @@
 
 namespace Zia
 {
+    /**
+     * The Response class
+     *
+     * @class Response
+     */
     class Response
     {
     private:
@@ -43,42 +48,42 @@ namespace Zia
         /**
          * Get the actual content of the response.
          *
-         * @return
+         * @return The actual content of the response
          */
         Content &getContent();
 
         /**
          * Get the actual status of the response.
          *
-         * @return
+         * @return The actual status of the response
          */
         Status &getStatus();
 
         /**
          * Get the actual headers of the response.
          *
-         * @return
+         * @return The actual headers of the response
          */
         HeaderWrapper &getHeaders();
 
         /**
          * Alias for getHeaders().addHeader().
          *
-         * @param header
+         * @param header The Header to add.
          */
         void addHeader(const Header &header);
 
         /**
          * Set the actual content to a new one.
          *
-         * @param content
+         * @param content The new content
          */
         void setContent(const Content &content);
 
         /**
          * Set the actual status to a new one.
          *
-         * @param status
+         * @param status The new status
          */
         void setStatus(const Status &status);
 
@@ -86,7 +91,7 @@ namespace Zia
          * Set the actual headers to a new one.
          * Should not be called.
          *
-         * @param headers
+         * @param headers The new headers
          */
         void setHeaders(const HeaderWrapper &headers);
     };

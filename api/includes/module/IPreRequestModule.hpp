@@ -14,20 +14,23 @@ namespace Zia
 {
     namespace Module
     {
+	/**
+	 * @class IPreRequestModule
+	 */
         class IPreRequestModule
         {
         public:
             /**
              * Get the weight of the catchPreRequest method of this module.
              *
-             * @return
+             * @return The weight of the catchPreRequest method of this module.
              */
             virtual int getPreRequestWeight() const = 0;
 
             /**
              * Catch the request as string after the receiving and before the Request object is parsed and created.
              *
-             * @param request
+             * @param request A string containing the raw data of the request.
              */
             virtual void catchPreRequest(std::string &request) = 0;
         };

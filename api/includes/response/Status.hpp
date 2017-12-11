@@ -15,6 +15,8 @@ namespace Zia
 {
     /**
      * Status class which focus to handle the http response status.
+     *
+     * @class Status
      */
     class Status
     {
@@ -23,6 +25,7 @@ namespace Zia
          * List of Http Status Code
          *
          * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+         * @enum StatusCode
          */
         enum StatusCode : unsigned int
         {
@@ -144,7 +147,7 @@ namespace Zia
         /**
          * Constructor with standard code and text.
          *
-         * @param code
+         * @param code The value of the status code
          */
         Status(StatusCode code);
 
@@ -156,29 +159,29 @@ namespace Zia
         /**
          * Set the status respecting the Http RFC.
          *
-         * @param code
+         * @param code The value of the status code
          */
         void setStandardStatus(StatusCode code);
 
         /**
          * Set the status with custom status code and status text.
          *
-         * @param code
-         * @param text
+         * @param code The value of the custom status code
+         * @param text The string corresponding to the custom status code
          */
         void setCustomStatus(unsigned int code, const std::string &text);
 
         /**
          * Get the actual status code.
          *
-         * @return
+         * @return the actual status code
          */
         unsigned int getCode() const;
 
         /**
          * Get the actual status text.
          *
-         * @return
+         * @return the actual status text
          */
         const std::string &getText() const;
     };

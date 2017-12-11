@@ -16,6 +16,7 @@
 #include "module/IPreResponseModule.hpp"
 #include "module/AModule.hpp"
 
+// You simply have to inherit from the different module class to register your hooks
 class ModExample : public Zia::Module::AModule,
                    public Zia::Module::IPostRequestModule,
                    public Zia::Module::IPostResponseModule,

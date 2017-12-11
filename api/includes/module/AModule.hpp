@@ -21,6 +21,8 @@ namespace Zia
          * Module Abstract.
          *
          * If you want to have all the settings code already set, you should extends from this class.
+         *
+         * @class AModule
          */
         class AModule : public IModule
         {
@@ -73,7 +75,7 @@ namespace Zia
              *
              * @see Zia::Modules::IModule::getConfigPathFile for more details
              *
-             * @return
+             * @return The configuration path file of the module
              */
             const std::string &getConfigPathFile() const final;
 

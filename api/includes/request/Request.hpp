@@ -19,12 +19,16 @@ namespace Zia
 {
     /**
      * @see https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+     *
+     * @class Request
      */
     class Request
     {
     public:
         /**
          * All the standard available Method
+         *
+         * @enum Method
          */
         enum class Method
         {
@@ -88,65 +92,51 @@ namespace Zia
         /**
          * Get the Request Method.
          *
-         * @return
+         * @return The HTTP method of the request
          */
         Method getMethod() const;
 
         /**
          * Get the Request Method in string.
          *
-         * @return
+         * @return A string containing the request's HTTP method
          */
         const std::string &getMethodText() const;
 
         /**
          * Get the Request URI.
          *
-         * @return
+         * @return A string containing the request URI
          */
         const std::string &getUri() const;
 
         /**
          * Get the Request HTTP Version.
          *
-         * @return
+         * @return A string containing the HTTP version of the request.
          */
         const std::string &getHttpVersion() const;
 
         /**
          * Get the Request Headers.
          *
-         * @return
+         * @return A container containing the HTTP headers of the request.
          */
         const HeaderWrapper &getHeaders() const;
 
         /**
          * Get the Request Body.
          *
-         * @return
+         * @return The raw data of the request.
          */
         const std::string &getBody() const;
 
         /**
          * Get the Request params parsed from the body.
          *
-         * @return
+         * @return The params of the request
          */
         std::map<std::string, std::string> &getParams();
-        
-#ifdef REQUEST_SETTERS
-        void setMethod(Method method);
-
-        void setMethodText(const std::string &methodText);
-
-        void setUri(const std::string &uri);
-
-        void setHttpVersion(const std::string &httpVersion);
-
-        void setHeaders(const HeaderWrapper &headers);
-
-        void setBody(const std::string &body);
-#endif // !REQUEST_SETTERS
     };
 
     typedef std::unique_ptr<Request> RequestPtr;

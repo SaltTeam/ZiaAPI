@@ -49,24 +49,4 @@ namespace Zia
 
     std::map<std::string, std::string> &Request::getParams()
     { return _params; }
-
-#ifdef REQUEST_SETTERS
-    void Request::setMethod(Request::Method method)
-    { this->_method = method; }
-
-    void Request::setMethodText(const std::string &methodText)
-    { this->_methodText = methodText; }
-
-    void Request::setUri(const std::string &uri)
-    { this->_uri = uri; }
-
-    void Request::setHttpVersion(const std::string &httpVersion)
-    { this->_httpVersion = httpVersion; }
-
-    void Request::setHeaders(const HeaderWrapper &headers)
-    { this->_headers = headers; }
-
-    void Request::setBody(const std::string &body)
-    { this->_body = body; }
-#endif // !REQUEST_SETTERS
 }
