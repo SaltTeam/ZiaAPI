@@ -5,4 +5,4 @@ Changes proposed in this pull request:
  - 
  - 
 
-Mention to @SaltTeam/scorsi.
+Mention to @scorsi.
