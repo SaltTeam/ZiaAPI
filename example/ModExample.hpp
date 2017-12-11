@@ -1,15 +1,19 @@
-//
-// Created by sylva on 11/12/2017.
-//
+/**
+ * Zia Httpd Server API
+ *
+ * @authors SaltTeam
+ * @date 11/12/2017
+ * @package Zia
+ */
 
 #ifndef CPP_ZIA_MODEXAMPLE_HPP
 #define CPP_ZIA_MODEXAMPLE_HPP
 
 
-#include <module/IPostRequestModule.hpp>
-#include <module/IPostResponseModule.hpp>
-#include <module/IPreRequestModule.hpp>
-#include <module/IPreResponseModule.hpp>
+#include "module/IPostRequestModule.hpp"
+#include "module/IPostResponseModule.hpp"
+#include "module/IPreRequestModule.hpp"
+#include "module/IPreResponseModule.hpp"
 #include "module/AModule.hpp"
 
 class ModExample : public Zia::Module::AModule,
