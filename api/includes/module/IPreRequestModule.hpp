@@ -14,9 +14,9 @@ namespace Zia
 {
     namespace Module
     {
-	/**
-	 * @class IPreRequestModule
-	 */
+        /**
+         * @class IPreRequestModule
+         */
         class IPreRequestModule
         {
         public:
@@ -32,7 +32,7 @@ namespace Zia
              *
              * @param request A string containing the raw data of the request.
              */
-            virtual void catchPreRequest(std::string &request) = 0;
+            virtual void catchPreRequest(Zia::Session &session, std::string &request) = 0;
         };
     }
 }

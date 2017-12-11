@@ -14,9 +14,9 @@ namespace Zia
 {
     namespace Module
     {
-	/**
-	 * @class IPostResponseModule
-	 */
+        /**
+         * @class IPostResponseModule
+         */
         class IPostResponseModule
         {
         public:
@@ -32,7 +32,7 @@ namespace Zia
              *
              * @param response A string containing the raw data of the response.
              */
-            virtual void catchPostResponse(std::string &response) = 0;
+            virtual void catchPostResponse(Zia::Session &session, std::string &response) = 0;
         };
     }
 }

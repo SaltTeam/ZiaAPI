@@ -24,6 +24,7 @@ set(SOURCE_FILES
         api/includes/header/HeaderNormalizer.hpp
         api/includes/request/Request.hpp
         api/includes/request/ConstRequest.hpp
+        api/includes/session/Session.hpp
 
         api/sources/exception/Exception.cpp
         api/sources/exception/ServerError.cpp
@@ -38,6 +39,7 @@ set(SOURCE_FILES
         api/sources/header/HeaderNormalizer.cpp
         api/sources/request/Request.cpp
         api/sources/request/ConstRequest.cpp
+        api/sources/session/Session.cpp
 
         example/ModExample.hpp
         example/ModExample.cpp

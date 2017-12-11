@@ -8,16 +8,17 @@
 
 #pragma once
 
-#include <response/Response.hpp>
+#include "response/Response.hpp"
+#include "request/ConstRequest.hpp"
 #include "request/Request.hpp"
 
 namespace Zia
 {
     namespace Module
     {
-	/**
-	 * @class IPreResponseModule
-	 */
+        /**
+         * @class IPreResponseModule
+         */
         class IPreResponseModule
         {
         public:
@@ -34,7 +35,7 @@ namespace Zia
              * @param request The Request object associated to the response.
              * @param response The response object to pass to the module.
              */
-            virtual void catchPreResponse(const Zia::Request &request, Zia::Response &response) = 0;
+            virtual void catchPreResponse(Zia::Session &session, const Zia::ConstRequest &request, Zia::Response &response) = 0;
         };
     }
 }

@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <session/Session.hpp>
 #include "response/Response.hpp"
 #include "request/Request.hpp"
 
@@ -15,9 +16,9 @@ namespace Zia
 {
     namespace Module
     {
-	/**
-	 * @class IPostRequestModule
-	 */
+        /**
+         * @class IPostRequestModule
+         */
         class IPostRequestModule
         {
         public:
@@ -34,7 +35,7 @@ namespace Zia
              * @param request The request to pass to the module.
              * @return A ResponsePtr pointing to the response to send or nullptr otherwise.
              */
-            virtual Zia::ResponsePtr catchPostRequest(Zia::Request &request) = 0;
+            virtual Zia::ResponsePtr catchPostRequest(Zia::Session &session, Zia::Request &request) = 0;
         };
     }
 }
