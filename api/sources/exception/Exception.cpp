@@ -11,6 +11,6 @@
 namespace Zia
 {
     Exception::Exception(const std::string &msg)
-            : exception(msg.c_str())
+            : std::runtime_error(msg.c_str())
     {}
 }

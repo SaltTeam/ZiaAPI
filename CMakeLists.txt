@@ -1,8 +1,8 @@
 project(cpp_zia)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} -W -Wall -Wextra -Werror -ggdb3")
+set(CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} -W -Wall -Wextra -Werror")
 
 cmake_minimum_required(VERSION 3.8.2)
 set(SOURCE_FILES

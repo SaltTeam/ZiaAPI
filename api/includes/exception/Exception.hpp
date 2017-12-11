@@ -10,10 +10,11 @@
 
 #include <exception>
 #include <string>
+#include <stdexcept>
 
 namespace Zia
 {
-    class Exception : public std::exception
+    class Exception : public std::runtime_error
     {
     public:
         explicit Exception(const std::string &msg);
