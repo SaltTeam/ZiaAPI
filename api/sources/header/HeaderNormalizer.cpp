@@ -12,8 +12,8 @@
 #include <ostream>
 #include <iostream>
 #include <vector>
-#include <utils/TextUtils.hpp>
 
+#include "utils/TextUtils.hpp"
 #include "header/HeaderNormalizer.hpp"
 
 namespace Zia

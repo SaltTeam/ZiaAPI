@@ -10,8 +10,8 @@
 
 #include <string>
 #include <map>
-#include <request/Request.hpp>
-#include <response/Response.hpp>
+#include "request/Request.hpp"
+#include "response/Response.hpp"
 
 namespace Zia
 {

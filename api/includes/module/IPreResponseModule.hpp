@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include "session/Session.hpp"
 #include "response/Response.hpp"
 #include "request/ConstRequest.hpp"
 #include "request/Request.hpp"

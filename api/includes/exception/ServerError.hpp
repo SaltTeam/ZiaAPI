@@ -28,15 +28,15 @@ namespace Zia
         Status _status;
 
     public:
-	/**
-	 * @brief Constructor for the ServerError
-	 * @param status The HTTP status to send in the response.
-	 */
+        /**
+         * @brief Constructor for the ServerError
+         * @param status The HTTP status to send in the response.
+         */
         explicit ServerError(const Status &status);
 
-	/**
-	 * @return The HTTP status of the Exception.
-	 */
+        /**
+         * @return The HTTP status of the Exception.
+         */
         const Status &getStatus() const;
     };
 }

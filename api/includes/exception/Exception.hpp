@@ -24,10 +24,10 @@ namespace Zia
     class Exception : public std::runtime_error
     {
     public:
-	/**
-	 * @brief Constructor for the Exception class
-	 * @param msg The error message corresponding to the exception
-	 */
+        /**
+         * @brief Constructor for the Exception class
+         * @param msg The error message corresponding to the exception
+         */
         explicit Exception(const std::string &msg);
     };
 }

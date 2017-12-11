@@ -6,8 +6,8 @@
  * @package Zia
  */
 
-#include <header/HeaderNormalizer.hpp>
 #include "header/Header.hpp"
+#include "header/HeaderNormalizer.hpp"
 
 namespace Zia
 {
