@@ -36,6 +36,9 @@ set(SOURCE_FILES
         api/sources/header/HeaderWrapper.cpp
         api/sources/header/HeaderNormalizer.cpp
         api/sources/request/Request.cpp
+
+        example/ModExample.hpp
+        example/ModExample.cpp
         )
 include_directories(api/includes)
 add_executable(cpp_zia ${SOURCE_FILES})
