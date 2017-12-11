@@ -31,36 +31,36 @@ namespace Zia
         std::vector<Header> _headers;
 
     public:
-	/**
-	 * Constructor
-	 */
+        /**
+         * Constructor
+         */
         HeaderWrapper();
 
-	/**
-	 * Destructor
-	 */
+        /**
+         * Destructor
+         */
         ~HeaderWrapper();
 
-	/**
-	 * Add the given Header to the current Header list
-	 *
-	 * @param header The Header to add.
-	 */
+        /**
+         * Add the given Header to the current Header list
+         *
+         * @param header The Header to add.
+         */
         void addHeader(const Header &header);
 
-	/**
-	 * Get the first Header in the list with a name corresponding to key.
-	 *
-	 * @param key The name of the Header to get.
-	 * @return
-	 */
+        /**
+         * Get the first Header in the list with a name corresponding to key.
+         *
+         * @param key The name of the Header to get.
+         * @return
+         */
         const Header &getHeader(const std::string &key) const;
 
-	/**
-	 * Get the vector of headers.
-	 *
-	 * @return The vector of Headers
-	 */
+        /**
+         * Get the vector of headers.
+         *
+         * @return The vector of Headers
+         */
         const std::vector<Header> &getAllHeaders() const;
     };
 }
