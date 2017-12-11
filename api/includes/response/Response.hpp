@@ -55,9 +55,10 @@ namespace Zia
         /**
          * Render the response to std::string
          *
+         * @param setAutoLength
          * @return
          */
-        const std::string render();
+        const std::string render(bool setAutoLength = true);
 
         /**
          * Get the actual content of the response.

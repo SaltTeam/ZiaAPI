@@ -69,11 +69,16 @@ namespace Zia
         this->_httpVersion = httpVersion;
     }
 
-    const std::string Response::render()
+    const std::string Response::render(bool setAutoLength)
     {
         std::string str;
 
         str = this->getHttpVersion() + " " + this->getStatus().render() + "\n";
+        if (setAutoLength)
+        {
+            this->getHeaders().addHeader(
+                    Header{Header::ResponseHeader::CONTENT_LENGTH, std::to_string(this->getContent().get().length())});
+        }
         str += this->getHeaders().render() + "\n";
         str += this->getContent().get();
 
