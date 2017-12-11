@@ -52,6 +52,13 @@ namespace Zia
         ~Response();
 
         /**
+         * Render the response to std::string
+         *
+         * @return
+         */
+        const std::string render();
+
+        /**
          * Get the actual content of the response.
          *
          * @return The actual content of the response

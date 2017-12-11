@@ -156,6 +156,8 @@ namespace Zia
          */
         ~Status();
 
+        const std::string render();
+
         /**
          * Set the status respecting the Http RFC.
          *

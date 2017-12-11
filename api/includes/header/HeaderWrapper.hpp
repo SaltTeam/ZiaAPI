@@ -41,6 +41,8 @@ namespace Zia
          */
         ~HeaderWrapper();
 
+        const std::string render();
+
         /**
          * Add the given Header to the current Header list
          *

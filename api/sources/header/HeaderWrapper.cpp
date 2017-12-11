@@ -6,6 +6,7 @@
  * @package Zia
  */
 
+#include <header/HeaderNormalizer.hpp>
 #include "header/HeaderWrapper.hpp"
 
 namespace Zia
@@ -28,7 +29,9 @@ namespace Zia
         for (auto &header : _headers)
         {
             if (header.getKey() == key)
+            {
                 return header;
+            }
         }
         throw std::exception();
     }
@@ -36,5 +39,16 @@ namespace Zia
     const std::vector<Header> &HeaderWrapper::getAllHeaders() const
     {
         return this->_headers;
+    }
+
+    const std::string HeaderWrapper::render()
+    {
+        std::string str;
+
+        for (const auto &header : this->_headers)
+        {
+            str += header.render(HeaderNormalizationType::ALL) + "\n";
+        }
+        return str;
     }
 }

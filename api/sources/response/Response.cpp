@@ -6,6 +6,7 @@
  * @package Zia
  */
 
+#include <header/HeaderNormalizer.hpp>
 #include "response/Response.hpp"
 
 namespace Zia
@@ -66,5 +67,16 @@ namespace Zia
     void Response::setHttpVersion(const std::string &httpVersion)
     {
         this->_httpVersion = httpVersion;
+    }
+
+    const std::string Response::render()
+    {
+        std::string str;
+
+        str = this->getHttpVersion() + " " + this->getStatus().render() + "\n";
+        str += this->getHeaders().render() + "\n";
+        str += this->getContent().get();
+
+        return str;
     }
 }

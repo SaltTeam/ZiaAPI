@@ -41,6 +41,11 @@ namespace Zia
         return this->_text;
     }
 
+    const std::string Status::render()
+    {
+        return std::to_string(this->getCode()) + " " + this->getText();
+    }
+
     const std::map<const unsigned int, const std::string> Status::statusText = {
             {StatusCode::UNKNOWN,                         ""},
             {StatusCode::CONTINUE,                        "Continue"},
