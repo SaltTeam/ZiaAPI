@@ -39,19 +39,19 @@ public:
 
     int getPostRequestWeight() const override;
 
-    Zia::ResponsePtr catchPostRequest(Zia::Request &request) override;
+    Zia::ResponsePtr catchPostRequest(Zia::Session &session, Zia::Request &request) override;
 
     int getPostResponseWeight() const override;
 
-    void catchPostResponse(std::string &response) override;
+    void catchPostResponse(Zia::Session &session, std::string &response) override;
 
     int getPreRequestWeight() const override;
 
-    void catchPreRequest(std::string &request) override;
+    void catchPreRequest(Zia::Session &session, std::string &request) override;
 
     int getPreResponseWeight() const override;
 
-    void catchPreResponse(const Zia::Request &request, Zia::Response &response) override;
+    void catchPreResponse(Zia::Session &session, const Zia::ConstRequest &request, Zia::Response &response) override;
 };
 
 

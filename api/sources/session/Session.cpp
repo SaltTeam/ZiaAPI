@@ -17,6 +17,6 @@ namespace Zia
     const std::string &Session::getIpv4() const
     { return _ipv4; }
 
-    std::map<std::string, std::string> &Session::getParams() const
+    std::map<std::string, std::string> &Session::getParams()
     { return _params; }
 }
