@@ -11,6 +11,7 @@
 #include <string>
 #include <unordered_map>
 #include <map>
+#include <memory>
 
 #include "header/HeaderWrapper.hpp"
 
@@ -147,4 +148,6 @@ namespace Zia
         void setBody(const std::string &body);
 #endif // !REQUEST_SETTERS
     };
+
+    typedef std::unique_ptr<Request> RequestPtr;
 }

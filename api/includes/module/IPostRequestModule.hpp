@@ -31,7 +31,7 @@ namespace Zia
              * @param request
              * @return
              */
-            virtual Zia::Response catchPostRequest(Zia::Request &request) = 0;
+            virtual Zia::ResponsePtr catchPostRequest(Zia::Request &request) = 0;
         };
     }
 }

@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <memory>
 #include "Content.hpp"
 #include "Status.hpp"
 #include "header/HeaderWrapper.hpp"
@@ -89,4 +90,6 @@ namespace Zia
          */
         void setHeaders(const HeaderWrapper &headers);
     };
+
+    typedef std::unique_ptr<Response> ResponsePtr;
 }
