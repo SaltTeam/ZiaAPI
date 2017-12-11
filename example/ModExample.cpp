@@ -11,9 +11,9 @@
 
 extern "C"
 {
-ModulePtr zia_create_module(void)
+ModExample* zia_create_module(void)
 {
-    return std::make_unique<ModExample>();
+    return new ModExample;
 }
 }
 
