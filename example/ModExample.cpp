@@ -9,6 +9,14 @@
 #include <memory>
 #include "ModExample.hpp"
 
+extern "C"
+{
+ModulePtr zia_create_module(void)
+{
+    return std::make_unique<ModExample>();
+}
+}
+
 bool ModExample::initialize()
 {
     // Init your resources if needed

@@ -74,3 +74,5 @@ namespace Zia
         };
     }
 }
+
+typedef std::unique_ptr<Zia::Module::IModule> ModulePtr;

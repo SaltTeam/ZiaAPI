@@ -16,6 +16,15 @@
 #include "module/IPreResponseModule.hpp"
 #include "module/AModule.hpp"
 
+/**
+ *
+ * This is an example module for the SaltTeam Zia API
+ * The code may be far from perfect but it gives you a fair look
+ * of what your modules will look like and how to use some data structures
+ * we provide to handle the HTTP protocol.
+ *
+ */
+
 // You simply have to inherit from the different module class to register your hooks
 class ModExample : public Zia::Module::AModule,
                    public Zia::Module::IPostRequestModule,
