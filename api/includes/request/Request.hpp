@@ -94,7 +94,7 @@ namespace Zia
          *
          * @return The HTTP method of the request
          */
-        Method getMethod() const;
+        Method getMethod();
 
         /**
          * Get the Request Method in string.
