@@ -27,6 +27,12 @@ namespace Zia
         Status _status;
         HeaderWrapper _headers;
 
+        /**
+         * The Request HTTP Version.
+         * eg. HTTP/1.1
+         */
+        std::string _httpVersion;
+
     public:
         /**
          * Constructor.
@@ -67,6 +73,13 @@ namespace Zia
         HeaderWrapper &getHeaders();
 
         /**
+         * Get the Request HTTP Version.
+         *
+         * @return A string containing the HTTP version of the request.
+         */
+        std::string &getHttpVersion();
+
+        /**
          * Alias for getHeaders().addHeader().
          *
          * @param header The Header to add.
@@ -86,6 +99,13 @@ namespace Zia
          * @param status The new status
          */
         void setStatus(const Status &status);
+
+        /**
+         * Set the HttpVersion
+         *
+         * @param httpVersion
+         */
+        void setHttpVersion(const std::string &httpVersion);
 
         /**
          * Set the actual headers to a new one.
