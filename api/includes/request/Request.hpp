@@ -101,35 +101,35 @@ namespace Zia
          *
          * @return A string containing the request's HTTP method
          */
-        const std::string &getMethodText() const;
+         std::string &getMethodText();
 
         /**
          * Get the Request URI.
          *
          * @return A string containing the request URI
          */
-        const std::string &getUri() const;
+         std::string &getUri();
 
         /**
          * Get the Request HTTP Version.
          *
          * @return A string containing the HTTP version of the request.
          */
-        const std::string &getHttpVersion() const;
+         std::string &getHttpVersion();
 
         /**
          * Get the Request Headers.
          *
          * @return A container containing the HTTP headers of the request.
          */
-        const HeaderWrapper &getHeaders() const;
+         HeaderWrapper &getHeaders();
 
         /**
          * Get the Request Body.
          *
          * @return The raw data of the request.
          */
-        const std::string &getBody() const;
+         std::string &getBody();
 
         /**
          * Get the Request params parsed from the body.
