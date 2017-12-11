@@ -77,7 +77,7 @@ namespace Zia
   const std::string &ConstRequest::getBody() const
   { return this->_body; }
 
-  std::map<std::string, std::string> &ConstRequest::getParams()
+  const std::map<std::string, std::string> &ConstRequest::getParams() const
   { return _params; }
 
 #ifdef REQUEST_SETTERS

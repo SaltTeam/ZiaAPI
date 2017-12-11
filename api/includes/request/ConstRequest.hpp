@@ -123,7 +123,7 @@ namespace Zia
      *
      * @return
      */
-    std::map<std::string, std::string> &getParams();
+    const std::map<std::string, std::string> &getParams() const;
 
 #ifdef REQUEST_SETTERS
     void setMethod(Method method);
