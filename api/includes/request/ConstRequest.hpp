@@ -23,13 +23,6 @@ namespace Zia
      */
     class ConstRequest
     {
-    public:
-
-        /**
-         * Used to recover the correct Method enum
-         */
-        static const std::map<const std::string, const Request::Method> methodText;
-
     private:
         /**
          * The Request Method.

@@ -57,4 +57,14 @@ namespace Zia
     {
         this->_headers = headers;
     }
+
+    std::string &Response::getHttpVersion()
+    {
+        return this->_httpVersion;
+    }
+
+    void Response::setHttpVersion(const std::string &httpVersion)
+    {
+        this->_httpVersion = httpVersion;
+    }
 }
