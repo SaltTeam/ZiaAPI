@@ -29,22 +29,22 @@ namespace Zia
             {"TRACE",   Request::Method::TRACE}
     };
 
-    Request::Method Request::getMethod() const
+    Request::Method Request::getMethod()
     { return this->_method; }
 
-    const std::string &Request::getMethodText() const
+     std::string &Request::getMethodText()
     { return this->_methodText; }
 
-    const std::string &Request::getUri() const
+     std::string &Request::getUri()
     { return this->_uri; }
 
-    const std::string &Request::getHttpVersion() const
+     std::string &Request::getHttpVersion()
     { return this->_httpVersion; }
 
-    const HeaderWrapper &Request::getHeaders() const
+     HeaderWrapper &Request::getHeaders()
     { return this->_headers; }
 
-    const std::string &Request::getBody() const
+     std::string &Request::getBody()
     { return this->_body; }
 
     std::map<std::string, std::string> &Request::getParams()

@@ -90,42 +90,42 @@ namespace Zia
          *
          * @return
          */
-        Method getMethod() const;
+        Method getMethod();
 
         /**
          * Get the Request Method in string.
          *
          * @return
          */
-        const std::string &getMethodText() const;
+         std::string &getMethodText();
 
         /**
          * Get the Request URI.
          *
          * @return
          */
-        const std::string &getUri() const;
+         std::string &getUri();
 
         /**
          * Get the Request HTTP Version.
          *
          * @return
          */
-        const std::string &getHttpVersion() const;
+         std::string &getHttpVersion();
 
         /**
          * Get the Request Headers.
          *
          * @return
          */
-        const HeaderWrapper &getHeaders() const;
+         HeaderWrapper &getHeaders();
 
         /**
          * Get the Request Body.
          *
          * @return
          */
-        const std::string &getBody() const;
+         std::string &getBody();
 
         /**
          * Get the Request params parsed from the body.
@@ -137,15 +137,15 @@ namespace Zia
 #ifdef REQUEST_SETTERS
         void setMethod(Method method);
 
-        void setMethodText(const std::string &methodText);
+        void setMethodText( std::string &methodText);
 
-        void setUri(const std::string &uri);
+        void setUri( std::string &uri);
 
-        void setHttpVersion(const std::string &httpVersion);
+        void setHttpVersion( std::string &httpVersion);
 
-        void setHeaders(const HeaderWrapper &headers);
+        void setHeaders( HeaderWrapper &headers);
 
-        void setBody(const std::string &body);
+        void setBody( std::string &body);
 #endif // !REQUEST_SETTERS
     };
 
