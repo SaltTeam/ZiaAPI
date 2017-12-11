@@ -63,7 +63,8 @@ int ModExample::getPostResponseWeight() const
 
 void ModExample::catchPostResponse(std::string& response)
 {
-
+    // You can do some shit with the raw data here
+    // Maybe a good place for your ModSSL implementation ;)
 }
 
 int ModExample::getPreRequestWeight() const
@@ -80,7 +81,8 @@ int ModExample::getPreRequestWeight() const
 
 void ModExample::catchPreRequest(std::string& request)
 {
-
+    // You can do some shit with the raw data here
+    // Maybe a good place for your ModSSL implementation ;)
 }
 
 int ModExample::getPreResponseWeight() const
@@ -98,5 +100,9 @@ int ModExample::getPreResponseWeight() const
 void ModExample::catchPreResponse(const Zia::Request& request,
 				  Zia::Response& response)
 {
-
+    response.getHeaders().addHeader(
+	Zia::Header(
+	    Zia::Header::ResponseHeader::SERVER, "Zia"
+	)
+    );
 }
