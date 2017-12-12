@@ -29,33 +29,13 @@ namespace Zia
 
     const std::string Header::render(HeaderNormalizer::HeaderNormalizationType type) const
     {
-        if (_isCustom)
-        {
-            std::string normalizedKey = _key;
-            HeaderNormalizer::normalize(normalizedKey, type);
-            return normalizedKey + ": " + _value;
-        }
-        return _key + ": " + _value;
-    }
-
-    inline const std::string &Header::getKey() const
-    {
-        return this->_key;
-    }
-
-    inline const std::string &Header::getValue() const
-    {
-        return this->_value;
-    }
-
-    inline void Header::setKey(const std::string &key)
-    {
-        this->_key = key;
-    }
-
-    inline void Header::setValue(const std::string &value)
-    {
-        this->_value = value;
+	if (_isCustom)
+	{
+	    std::string normalizedKey = _key;
+	    HeaderNormalizer::normalize(normalizedKey, type);
+	    return normalizedKey + ": " + _value;
+	}
+	return _key + ": " + _value;
     }
 
     const std::map<const Header::RequestHeader, const std::string> Header::requestHeaderText = {

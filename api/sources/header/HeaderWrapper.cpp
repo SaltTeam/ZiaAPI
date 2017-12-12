@@ -19,28 +19,6 @@ namespace Zia
         this->_headers.clear();
     }
 
-    inline void HeaderWrapper::addHeader(const Header &header)
-    {
-        this->_headers.push_back(header);
-    }
-
-    inline const Header &HeaderWrapper::getHeader(const std::string &key) const
-    {
-        for (auto &header : _headers)
-        {
-            if (header.getKey() == key)
-            {
-                return header;
-            }
-        }
-        throw std::exception();
-    }
-
-    inline const std::vector<Header> &HeaderWrapper::getAllHeaders() const
-    {
-        return this->_headers;
-    }
-
     const std::string HeaderWrapper::render()
     {
         std::string str;

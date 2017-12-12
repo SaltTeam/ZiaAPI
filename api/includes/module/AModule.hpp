@@ -49,7 +49,10 @@ namespace Zia
              *
              * @param settings The new settings sent by Https server
              */
-            void updateSettings(const std::map<std::string, std::string> &settings) final;
+	    inline void updateSettings(const std::map<std::string, std::string> &settings) final
+	    {
+		this->_settings = settings;
+	    }
 
             /**
              * Final implementation of the getSetting method
@@ -59,7 +62,10 @@ namespace Zia
              * @param key The key of the setting we attempt to get.
              * @return The corresponding setting
              */
-            inline const std::string &getSetting(const std::string &key) const final;
+	    inline const std::string &getSetting(const std::string &key) const final
+	    {
+		return this->_settings.at(key);
+	    }
 
             /**
              * Final implementation of the getAllSettings method
@@ -68,7 +74,10 @@ namespace Zia
              *
              * @return The whole settings map
              */
-            inline const std::map<std::string, std::string> &getAllSettings() const final;
+	    inline const std::map<std::string, std::string> &getAllSettings() const final
+	    {
+		return this->_settings;
+	    }
 
             /**
              * Final implementation of the getConfigPathFile
@@ -77,7 +86,10 @@ namespace Zia
              *
              * @return The configuration path file of the module
              */
-            inline const std::string &getConfigPathFile() const final;
+	    inline const std::string &getConfigPathFile() const final
+	    {
+		return this->_configPath;
+	    }
 
             //
             // Interface's methods not-implemented

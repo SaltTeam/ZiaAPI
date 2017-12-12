@@ -53,21 +53,38 @@ namespace Zia
          *
          * @param header The Header to add.
          */
-        inline void addHeader(const Header &header);
+	inline void addHeader(const Header &header)
+	{
+	    this->_headers.push_back(header);
+	}
 
-        /**
+
+	/**
          * Get the first Header in the list with a name corresponding to key.
          *
          * @param key The name of the Header to get.
          * @return
          */
-        inline const Header &getHeader(const std::string &key) const;
+	inline const Header &getHeader(const std::string &key) const
+	{
+	    for (auto &header : _headers)
+	    {
+		if (header.getKey() == key)
+		{
+		    return header;
+		}
+	    }
+	    throw std::exception();
+	}
 
         /**
          * Get the vector of headers.
          *
          * @return The vector of Headers
          */
-        inline const std::vector<Header> &getAllHeaders() const;
+	inline const std::vector<Header> &getAllHeaders() const
+	{
+	    return this->_headers;
+	}
     };
 }
