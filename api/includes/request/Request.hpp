@@ -94,49 +94,49 @@ namespace Zia
          *
          * @return The HTTP method of the request
          */
-        Method getMethod();
+        inline Method getMethod();
 
         /**
          * Get the Request Method in string.
          *
          * @return A string containing the request's HTTP method
          */
-         std::string &getMethodText();
+        inline std::string &getMethodText();
 
         /**
          * Get the Request URI.
          *
          * @return A string containing the request URI
          */
-         std::string &getUri();
+        inline std::string &getUri();
 
         /**
          * Get the Request HTTP Version.
          *
          * @return A string containing the HTTP version of the request.
          */
-         std::string &getHttpVersion();
+        inline std::string &getHttpVersion();
 
         /**
          * Get the Request Headers.
          *
          * @return A container containing the HTTP headers of the request.
          */
-         HeaderWrapper &getHeaders();
+        inline HeaderWrapper &getHeaders();
 
         /**
          * Get the Request Body.
          *
          * @return The raw data of the request.
          */
-         std::string &getBody();
+        inline std::string &getBody();
 
         /**
          * Get the Request params parsed from the body.
          *
          * @return The params of the request
          */
-        std::map<std::string, std::string> &getParams();
+        inline std::map<std::string, std::string> &getParams();
     };
 
     typedef std::unique_ptr<Request> RequestPtr;

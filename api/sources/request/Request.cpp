@@ -17,6 +17,41 @@ namespace Zia
     Request::~Request()
     {}
 
+    inline Request::Method Request::getMethod()
+    {
+        return this->_method;
+    }
+
+    inline std::string &Request::getMethodText()
+    {
+        return this->_methodText;
+    }
+
+    inline std::string &Request::getUri()
+    {
+        return this->_uri;
+    }
+
+    inline std::string &Request::getHttpVersion()
+    {
+        return this->_httpVersion;
+    }
+
+    inline HeaderWrapper &Request::getHeaders()
+    {
+        return this->_headers;
+    }
+
+    inline std::string &Request::getBody()
+    {
+        return this->_body;
+    }
+
+    inline std::map<std::string, std::string> &Request::getParams()
+    {
+        return _params;
+    }
+
     const std::map<const std::string, const Request::Method> Request::methodText = {
             {"GET",     Request::Method::GET},
             {"POST",    Request::Method::POST},
@@ -28,25 +63,4 @@ namespace Zia
             {"CONNECT", Request::Method::CONNECT},
             {"TRACE",   Request::Method::TRACE}
     };
-
-    Request::Method Request::getMethod()
-    { return this->_method; }
-
-     std::string &Request::getMethodText()
-    { return this->_methodText; }
-
-     std::string &Request::getUri()
-    { return this->_uri; }
-
-     std::string &Request::getHttpVersion()
-    { return this->_httpVersion; }
-
-     HeaderWrapper &Request::getHeaders()
-    { return this->_headers; }
-
-     std::string &Request::getBody()
-    { return this->_body; }
-
-    std::map<std::string, std::string> &Request::getParams()
-    { return _params; }
 }

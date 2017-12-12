@@ -59,7 +59,7 @@ namespace Zia
              * @param key The key of the setting we attempt to get.
              * @return The corresponding setting
              */
-            const std::string &getSetting(const std::string &key) const final;
+            inline const std::string &getSetting(const std::string &key) const final;
 
             /**
              * Final implementation of the getAllSettings method
@@ -68,7 +68,7 @@ namespace Zia
              *
              * @return The whole settings map
              */
-            const std::map<std::string, std::string> &getAllSettings() const final;
+            inline const std::map<std::string, std::string> &getAllSettings() const final;
 
             /**
              * Final implementation of the getConfigPathFile
@@ -77,7 +77,7 @@ namespace Zia
              *
              * @return The configuration path file of the module
              */
-            const std::string &getConfigPathFile() const final;
+            inline const std::string &getConfigPathFile() const final;
 
             //
             // Interface's methods not-implemented

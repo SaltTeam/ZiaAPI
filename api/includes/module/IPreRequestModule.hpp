@@ -25,7 +25,7 @@ namespace Zia
              *
              * @return The weight of the catchPreRequest method of this module.
              */
-            virtual int getPreRequestWeight() const = 0;
+            inline virtual int getPreRequestWeight() const = 0;
 
             /**
              * Catch the request as string after the receiving and before the Request object is parsed and created.

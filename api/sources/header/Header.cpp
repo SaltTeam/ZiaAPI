@@ -38,22 +38,22 @@ namespace Zia
         return _key + ": " + _value;
     }
 
-    const std::string &Header::getKey() const
+    inline const std::string &Header::getKey() const
     {
         return this->_key;
     }
 
-    const std::string &Header::getValue() const
+    inline const std::string &Header::getValue() const
     {
         return this->_value;
     }
 
-    void Header::setKey(const std::string &key)
+    inline void Header::setKey(const std::string &key)
     {
         this->_key = key;
     }
 
-    void Header::setValue(const std::string &value)
+    inline void Header::setValue(const std::string &value)
     {
         this->_value = value;
     }

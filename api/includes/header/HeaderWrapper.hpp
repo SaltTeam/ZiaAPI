@@ -41,6 +41,11 @@ namespace Zia
          */
         ~HeaderWrapper();
 
+        /**
+         * Render all headers
+         *
+         * @return
+         */
         const std::string render();
 
         /**
@@ -48,7 +53,7 @@ namespace Zia
          *
          * @param header The Header to add.
          */
-        void addHeader(const Header &header);
+        inline void addHeader(const Header &header);
 
         /**
          * Get the first Header in the list with a name corresponding to key.
@@ -56,13 +61,13 @@ namespace Zia
          * @param key The name of the Header to get.
          * @return
          */
-        const Header &getHeader(const std::string &key) const;
+        inline const Header &getHeader(const std::string &key) const;
 
         /**
          * Get the vector of headers.
          *
          * @return The vector of Headers
          */
-        const std::vector<Header> &getAllHeaders() const;
+        inline const std::vector<Header> &getAllHeaders() const;
     };
 }

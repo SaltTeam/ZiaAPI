@@ -47,26 +47,40 @@ namespace Zia
     ConstRequest::~ConstRequest()
     {}
 
-    Request::Method ConstRequest::getMethod() const
-    { return this->_method; }
+    inline Request::Method ConstRequest::getMethod() const
+    {
+        return this->_method;
+    }
 
-    const std::string &ConstRequest::getMethodText() const
-    { return this->_methodText; }
+    inline const std::string &ConstRequest::getMethodText() const
+    {
+        return this->_methodText;
+    }
 
-    const std::string &ConstRequest::getUri() const
-    { return this->_uri; }
+    inline const std::string &ConstRequest::getUri() const
+    {
+        return this->_uri;
+    }
 
-    const std::string &ConstRequest::getHttpVersion() const
-    { return this->_httpVersion; }
+    inline const std::string &ConstRequest::getHttpVersion() const
+    {
+        return this->_httpVersion;
+    }
 
-    const HeaderWrapper &ConstRequest::getHeaders() const
-    { return this->_headers; }
+    inline const HeaderWrapper &ConstRequest::getHeaders() const
+    {
+        return this->_headers;
+    }
 
-    const std::string &ConstRequest::getBody() const
-    { return this->_body; }
+    inline const std::string &ConstRequest::getBody() const
+    {
+        return this->_body;
+    }
 
-    const std::map<std::string, std::string> &ConstRequest::getParams() const
-    { return _params; }
+    inline const std::map<std::string, std::string> &ConstRequest::getParams() const
+    {
+        return _params;
+    }
 
 #ifdef REQUEST_SETTERS
     void Request::setMethod(Request::Method method)

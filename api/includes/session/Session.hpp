@@ -42,14 +42,14 @@ namespace Zia
          *
          * @return The session ipv4
          */
-        const std::string &getIpv4() const;
+        inline const std::string &getIpv4() const;
 
         /**
          * Get the session params map
          *
          * @return The session params map
          */
-        std::map<std::string, std::string> &getParams();
+        inline std::map<std::string, std::string> &getParams();
     };
 
     typedef std::unique_ptr<Session> SessionPtr;

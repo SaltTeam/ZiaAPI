@@ -25,7 +25,7 @@ namespace Zia
              *
              * @return The weight of the catchPostResponse method of this module.
              */
-            virtual int getPostResponseWeight() const = 0;
+            inline virtual int getPostResponseWeight() const = 0;
 
             /**
              * Catch the response as string after it was build by the httpd and before the sending.

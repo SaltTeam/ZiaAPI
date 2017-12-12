@@ -24,47 +24,47 @@ namespace Zia
     Response::~Response()
     {}
 
-    Content &Response::getContent()
+    inline Content &Response::getContent()
     {
         return this->_content;
     }
 
-    Status &Response::getStatus()
+    inline Status &Response::getStatus()
     {
         return this->_status;
     }
 
-    HeaderWrapper &Response::getHeaders()
+    inline HeaderWrapper &Response::getHeaders()
     {
         return this->_headers;
     }
 
-    void Response::addHeader(const Header &header)
+    inline void Response::addHeader(const Header &header)
     {
         _headers.addHeader(header);
     }
 
-    void Response::setContent(const Content &content)
+    inline void Response::setContent(const Content &content)
     {
         this->_content = content;
     }
 
-    void Response::setStatus(const Status &status)
+    inline void Response::setStatus(const Status &status)
     {
         this->_status = status;
     }
 
-    void Response::setHeaders(const HeaderWrapper &headers)
+    inline void Response::setHeaders(const HeaderWrapper &headers)
     {
         this->_headers = headers;
     }
 
-    std::string &Response::getHttpVersion()
+    inline std::string &Response::getHttpVersion()
     {
         return this->_httpVersion;
     }
 
-    void Response::setHttpVersion(const std::string &httpVersion)
+    inline void Response::setHttpVersion(const std::string &httpVersion)
     {
         this->_httpVersion = httpVersion;
     }

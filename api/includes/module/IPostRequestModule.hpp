@@ -27,7 +27,7 @@ namespace Zia
              *
              * @return The weight of the catchPostRequest method of this module
              */
-            virtual int getPostRequestWeight() const = 0;
+            inline virtual int getPostRequestWeight() const = 0;
 
             /**
              * Catch the request as object after the httpd parsed and created it and before the Response was created.

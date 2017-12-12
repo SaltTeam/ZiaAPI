@@ -65,56 +65,56 @@ namespace Zia
          *
          * @return The actual content of the response
          */
-        Content &getContent();
+        inline Content &getContent();
 
         /**
          * Get the actual status of the response.
          *
          * @return The actual status of the response
          */
-        Status &getStatus();
+        inline Status &getStatus();
 
         /**
          * Get the actual headers of the response.
          *
          * @return The actual headers of the response
          */
-        HeaderWrapper &getHeaders();
+        inline HeaderWrapper &getHeaders();
 
         /**
          * Get the Request HTTP Version.
          *
          * @return A string containing the HTTP version of the request.
          */
-        std::string &getHttpVersion();
+        inline std::string &getHttpVersion();
 
         /**
          * Alias for getHeaders().addHeader().
          *
          * @param header The Header to add.
          */
-        void addHeader(const Header &header);
+        inline void addHeader(const Header &header);
 
         /**
          * Set the actual content to a new one.
          *
          * @param content The new content
          */
-        void setContent(const Content &content);
+        inline void setContent(const Content &content);
 
         /**
          * Set the actual status to a new one.
          *
          * @param status The new status
          */
-        void setStatus(const Status &status);
+        inline void setStatus(const Status &status);
 
         /**
          * Set the HttpVersion
          *
          * @param httpVersion
          */
-        void setHttpVersion(const std::string &httpVersion);
+        inline void setHttpVersion(const std::string &httpVersion);
 
         /**
          * Set the actual headers to a new one.
@@ -122,7 +122,7 @@ namespace Zia
          *
          * @param headers The new headers
          */
-        void setHeaders(const HeaderWrapper &headers);
+        inline void setHeaders(const HeaderWrapper &headers);
     };
 
     typedef std::unique_ptr<Response> ResponsePtr;

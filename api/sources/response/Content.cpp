@@ -17,15 +17,23 @@ namespace Zia
     Content::~Content()
     {}
 
-    const std::string &Content::get() const
-    { return this->_content; }
+    inline const std::string &Content::get() const
+    {
+        return this->_content;
+    }
 
-    void Content::set(const std::string &content)
-    { this->_content = content; }
+    inline void Content::set(const std::string &content)
+    {
+        this->_content = content;
+    }
 
-    void Content::prepend(const std::string &content)
-    { this->_content = content + this->_content; }
+    inline void Content::prepend(const std::string &content)
+    {
+        this->_content = content + this->_content;
+    }
 
-    void Content::append(const std::string &content)
-    { this->_content += content; }
+    inline void Content::append(const std::string &content)
+    {
+        this->_content += content;
+    }
 }

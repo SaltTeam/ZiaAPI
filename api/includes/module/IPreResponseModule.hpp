@@ -28,7 +28,7 @@ namespace Zia
              *
              * @return The weight of the catchPreResponse method of this module.
              */
-            virtual int getPreResponseWeight() const = 0;
+            inline virtual int getPreResponseWeight() const = 0;
 
             /**
              * Catch the response after it was created from the request and before the response is parse and create as string.

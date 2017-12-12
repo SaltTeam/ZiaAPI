@@ -38,27 +38,27 @@ namespace Zia
          *
          * @return content The actual content
          */
-        const std::string &get() const;
+        inline const std::string &get() const;
 
         /**
          * Set the content to the new content.
          *
          * @param content The new content
          */
-        void set(const std::string &content);
+        inline void set(const std::string &content);
 
         /**
          * Prepend the actual content to the given string.
          *
          * @param content The data to prepend
          */
-        void prepend(const std::string &content);
+        inline void prepend(const std::string &content);
 
         /**
          * Append the actual content to the given string.
          *
          * @param content The data to append
          */
-        void append(const std::string &content);
+        inline void append(const std::string &content);
     };
 }

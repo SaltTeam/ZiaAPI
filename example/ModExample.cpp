@@ -28,7 +28,7 @@ void ModExample::shutdown()
     // Clean and release your resources
 }
 
-int ModExample::getPostRequestWeight() const
+inline int ModExample::getPostRequestWeight() const
 {
     // You can return a static value
     // Or return a value you get from the settings
@@ -57,7 +57,7 @@ Zia::ResponsePtr ModExample::catchPostRequest(Zia::Session &session, Zia::Reques
     return response;
 }
 
-int ModExample::getPostResponseWeight() const
+inline int ModExample::getPostResponseWeight() const
 {
     // You can return a static value
     // Or return a value you get from the settings
@@ -75,7 +75,7 @@ void ModExample::catchPostResponse(Zia::Session &session, std::string& response)
     // Maybe a good place for your ModSSL implementation ;)
 }
 
-int ModExample::getPreRequestWeight() const
+inline int ModExample::getPreRequestWeight() const
 {
     // You can return a static value
     // Or return a value you get from the settings
@@ -93,7 +93,7 @@ void ModExample::catchPreRequest(Zia::Session &session, std::string& request)
     // Maybe a good place for your ModSSL implementation ;)
 }
 
-int ModExample::getPreResponseWeight() const
+inline int ModExample::getPreResponseWeight() const
 {
     // You can return a static value
     // Or return a value you get from the settings

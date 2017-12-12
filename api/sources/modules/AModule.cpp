@@ -21,22 +21,22 @@ namespace Zia
             this->_settings.clear();
         }
 
-        void AModule::updateSettings(const std::map<std::string, std::string> &settings)
+        inline void AModule::updateSettings(const std::map<std::string, std::string> &settings)
         {
             this->_settings = settings;
         }
 
-        const std::string &AModule::getSetting(const std::string &key) const
+        inline const std::string &AModule::getSetting(const std::string &key) const
         {
             return this->_settings.at(key);
         }
 
-        const std::map<std::string, std::string> &AModule::getAllSettings() const
+        inline const std::map<std::string, std::string> &AModule::getAllSettings() const
         {
             return this->_settings;
         }
 
-        const std::string &AModule::getConfigPathFile() const
+        inline const std::string &AModule::getConfigPathFile() const
         {
             return this->_configPath;
         }

@@ -156,6 +156,11 @@ namespace Zia
          */
         ~Status();
 
+        /**
+         * Render the status
+         *
+         * @return
+         */
         const std::string render();
 
         /**
@@ -163,7 +168,7 @@ namespace Zia
          *
          * @param code The value of the status code
          */
-        void setStandardStatus(StatusCode code);
+        inline void setStandardStatus(StatusCode code);
 
         /**
          * Set the status with custom status code and status text.
@@ -171,20 +176,20 @@ namespace Zia
          * @param code The value of the custom status code
          * @param text The string corresponding to the custom status code
          */
-        void setCustomStatus(unsigned int code, const std::string &text);
+        inline void setCustomStatus(unsigned int code, const std::string &text);
 
         /**
          * Get the actual status code.
          *
          * @return the actual status code
          */
-        unsigned int getCode() const;
+        inline unsigned int getCode() const;
 
         /**
          * Get the actual status text.
          *
          * @return the actual status text
          */
-        const std::string &getText() const;
+        inline const std::string &getText() const;
     };
 }

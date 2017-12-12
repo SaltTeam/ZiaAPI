@@ -19,12 +19,12 @@ namespace Zia
         this->_headers.clear();
     }
 
-    void HeaderWrapper::addHeader(const Header &header)
+    inline void HeaderWrapper::addHeader(const Header &header)
     {
         this->_headers.push_back(header);
     }
 
-    const Header &HeaderWrapper::getHeader(const std::string &key) const
+    inline const Header &HeaderWrapper::getHeader(const std::string &key) const
     {
         for (auto &header : _headers)
         {
@@ -36,7 +36,7 @@ namespace Zia
         throw std::exception();
     }
 
-    const std::vector<Header> &HeaderWrapper::getAllHeaders() const
+    inline const std::vector<Header> &HeaderWrapper::getAllHeaders() const
     {
         return this->_headers;
     }

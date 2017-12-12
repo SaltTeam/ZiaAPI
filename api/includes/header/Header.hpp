@@ -203,30 +203,30 @@ namespace Zia
          * @brief Serialize the Header class to a RFC compliant HTTP Header
          * @return A string containing the formated HTTP Header
          */
-        const std::string render(HeaderNormalizer::HeaderNormalizationType) const;
+        inline const std::string render(HeaderNormalizer::HeaderNormalizationType) const;
 
         /**
          * @brief Getter for the Header Name
          * @return A string containing the name of the Header
          */
-        const std::string &getKey() const;
+        inline const std::string &getKey() const;
 
         /**
          * @brief Getter for the Header value
          * @return A string containing the value of the Header
          */
-        const std::string &getValue() const;
+        inline const std::string &getValue() const;
 
         /**
          * @brief Setter for the Header name.
          * @param key The name of the Header.
          */
-        void setKey(const std::string &key);
+        inline void setKey(const std::string &key);
 
         /**
          * @brief Setter for the Header value.
          * @param key The value of the Header.
          */
-        void setValue(const std::string &value);
+        inline void setValue(const std::string &value);
     };
 }

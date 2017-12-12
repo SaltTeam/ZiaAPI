@@ -74,49 +74,49 @@ namespace Zia
          *
          * @return
          */
-        Request::Method getMethod() const;
+        inline Request::Method getMethod() const;
 
         /**
          * Get the Request Method in string.
          *
          * @return
          */
-        const std::string &getMethodText() const;
+        inline const std::string &getMethodText() const;
 
         /**
          * Get the Request URI.
          *
          * @return
          */
-        const std::string &getUri() const;
+        inline const std::string &getUri() const;
 
         /**
          * Get the Request HTTP Version.
          *
          * @return
          */
-        const std::string &getHttpVersion() const;
+        inline const std::string &getHttpVersion() const;
 
         /**
          * Get the Request Headers.
          *
          * @return
          */
-        const HeaderWrapper &getHeaders() const;
+        inline const HeaderWrapper &getHeaders() const;
 
         /**
          * Get the Request Body.
          *
          * @return
          */
-        const std::string &getBody() const;
+        inline const std::string &getBody() const;
 
         /**
          * Get the Request params parsed from the body.
          *
          * @return
          */
-        const std::map<std::string, std::string> &getParams() const;
+        inline const std::map<std::string, std::string> &getParams() const;
 
 #ifdef REQUEST_SETTERS
         void setMethod(Method method);
