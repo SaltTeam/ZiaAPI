@@ -50,7 +50,7 @@ namespace Zia
         /**
          * Destructor.
          */
-        ~Response();
+        virtual ~Response();
 
         /**
          * Render the response to std::string

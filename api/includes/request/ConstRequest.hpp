@@ -67,7 +67,9 @@ namespace Zia
         ConstRequest(Request::Method method, std::string methodText, std::string uri,
                      std::string HttpVersion, std::string body);
 
-        ~ConstRequest();
+        void operator>>(ConstRequest other);
+
+        virtual ~ConstRequest();
 
         /**
          * Get the Request Method.

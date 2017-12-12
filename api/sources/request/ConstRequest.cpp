@@ -24,6 +24,16 @@ namespace Zia
         this->_uri = request.getUri();
     }
 
+    void  ConstRequest::operator>>(ConstRequest request) {
+        this->_body = request.getBody();
+        this->_headers = request.getHeaders();
+        this->_httpVersion = request.getHttpVersion();
+        this->_method = request.getMethod();
+        this->_methodText = request.getMethodText();
+        this->_params = request.getParams();
+        this->_uri = request.getUri();
+    }
+
     ConstRequest::ConstRequest(Request::Method method, std::string uri,
                                std::string httpVersion, std::string body)
     {

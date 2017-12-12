@@ -31,7 +31,7 @@ namespace Zia
         /**
          * Destructor.
          */
-        ~Content();
+        virtual ~Content();
 
         /**
          * Get the actual content.

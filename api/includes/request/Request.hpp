@@ -87,7 +87,7 @@ namespace Zia
     public:
         Request();
 
-        ~Request();
+        virtual ~Request();
 
         /**
          * Get the Request Method.

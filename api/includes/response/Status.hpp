@@ -149,12 +149,12 @@ namespace Zia
          *
          * @param code The value of the status code
          */
-        Status(StatusCode code);
+        explicit Status(StatusCode code);
 
         /**
          * Destructor.
          */
-        ~Status();
+        virtual ~Status();
 
         /**
          * Render the status

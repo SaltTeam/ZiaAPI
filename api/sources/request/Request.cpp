@@ -14,6 +14,7 @@ namespace Zia
             : _method(Method::CUSTOM), _methodText(""), _uri(""), _httpVersion(""), _headers(), _body("")
     {}
 
+
     Request::~Request()
     {}
 

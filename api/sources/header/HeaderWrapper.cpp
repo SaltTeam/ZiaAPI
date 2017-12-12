@@ -14,6 +14,7 @@ namespace Zia
     HeaderWrapper::HeaderWrapper()
     {}
 
+
     HeaderWrapper::~HeaderWrapper()
     {
         this->_headers.clear();

@@ -34,9 +34,9 @@ namespace Zia
         /**
          * Constructor
          */
-        HeaderWrapper() = default;
+        HeaderWrapper();
 
-        /**
+		/**
          * Destructor
          */
         virtual ~HeaderWrapper();
@@ -91,7 +91,6 @@ namespace Zia
 		 * deleted member functions
 		 */
 	public:
-		HeaderWrapper(HeaderWrapper const& other) = delete;
 		HeaderWrapper const& operator>>(HeaderWrapper const& other) = delete;
     };
 
