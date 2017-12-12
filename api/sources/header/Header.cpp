@@ -27,7 +27,7 @@ namespace Zia
             : _key(key), _value(value), _isCustom(true)
     {}
 
-    const std::string Header::render(HeaderNormalizationType type) const
+    const std::string Header::render(HeaderNormalizer::HeaderNormalizationType type) const
     {
         if (_isCustom)
         {

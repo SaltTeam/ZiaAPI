@@ -47,7 +47,7 @@ namespace Zia
 
         for (const auto &header : this->_headers)
         {
-            str += header.render(HeaderNormalizationType::ALL) + "\n";
+            str += header.render(HeaderNormalizer::HeaderNormalizationType::ALL) + "\n";
         }
         return str;
     }

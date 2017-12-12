@@ -20,7 +20,10 @@ namespace Zia
     /**
      * Forward declaration
      */
-    enum HeaderNormalizationType : short;
+    namespace HeaderNormalizer
+    {
+        enum HeaderNormalizationType : short;
+    }
 
     /**
      * @see https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
@@ -200,7 +203,7 @@ namespace Zia
          * @brief Serialize the Header class to a RFC compliant HTTP Header
          * @return A string containing the formated HTTP Header
          */
-        const std::string render(HeaderNormalizationType) const;
+        const std::string render(HeaderNormalizer::HeaderNormalizationType) const;
 
         /**
          * @brief Getter for the Header Name
