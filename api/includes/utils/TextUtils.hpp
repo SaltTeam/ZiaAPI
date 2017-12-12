@@ -14,20 +14,20 @@ namespace Zia
      */
     namespace Utils
     {
-	/**
-	 * @class TextUtils
-	 */
+        /**
+         * @class TextUtils
+         */
         class TextUtils
         {
         public:
-	    /**
-	     * Concat all the elements separated by the separator
-	     */
+            /**
+             * Concat all the elements separated by the separator
+             */
             static std::string join(const std::vector<std::string> &elements, const std::string &separator);
 
-	    /**
-	     * Split the string at every separator
-	     */
+            /**
+             * Split the string at every separator
+             */
             static std::vector<std::string> split(const std::string &s, const char separator);
         };
     }
