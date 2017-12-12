@@ -34,12 +34,12 @@ namespace Zia
         /**
          * Constructor
          */
-        HeaderWrapper();
+        HeaderWrapper() = default;
 
         /**
          * Destructor
          */
-        ~HeaderWrapper();
+        virtual ~HeaderWrapper();
 
         /**
          * Render all headers
@@ -86,5 +86,13 @@ namespace Zia
 	{
 	    return this->_headers;
 	}
+
+		/**
+		 * deleted member functions
+		 */
+	public:
+		HeaderWrapper(HeaderWrapper const& other) = delete;
+		HeaderWrapper const& operator>>(HeaderWrapper const& other) = delete;
     };
+
 }
